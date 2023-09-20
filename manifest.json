@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "GPT Notification/Quiz - STRI",
+  "version": "1.0",
+  "options_page": "Options/options.html",
+  "description": "Envoyez du texte sélectionné à ChatGPT et recevez une réponse dans une notification.",
+  "permissions": [
+    "contextMenus",
+    "storage",
+    "tabs",
+    "notifications",
+    "clipboardWrite",
+    "clipboardRead",
+    "activeTab",
+    "scripting"
+  ],
+  "icons": {
+    "128": "icon.png"
+  },
+  "background": {
+    "service_worker": "background.js" 
+  }
+}

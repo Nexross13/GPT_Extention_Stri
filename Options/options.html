@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Options</title>
+  <link rel="stylesheet" type="text/css" href="options.css">
+</head>
+<body id="mainBody">
+  <div class="container">
+    <h1>Options :</h1>
+    <div class="option-section">
+      <label for="model">Choisir un modèle :</label>
+      <select id="model">
+        <option value="gpt-3.5-turbo">GPT-3</option>
+        <option value="gpt-4-0613">GPT-4</option>
+      </select>
+    </div>
+    <div class="option-section">
+      <label for="theme">Choisir un thème :</label>
+      <select id="theme">
+        <option value="light">Clair</option>
+        <option value="dark">Sombre</option>
+      </select>
+    </div>
+    <div class="option-section">
+      <label for="prefix">Préfixe de question :</label>
+      <textarea id="prefix" rows="4" placeholder="Votre préfixe (Exemple : Vous êtes un expert en informatique, répondez-moi avec seulement la ou les réponses à la question :)"></textarea>
+    </div>
+    <div class="option-section">
+      <label for="apiKey">Clé API :</label>
+      <input type="text" id="apiKey" size="60" maxlength="100" placeholder="Votre clé API" />
+      
+    </div>
+    <button id="save">Sauvegarder</button>
+    <p id="status"></p>
+    <div class="how-to">
+      <h2>Comment utiliser cette extension :</h2>
+      <p>1. Sélectionnez du texte sur n'importe quelle page Web.</p>
+      <p>2. Cliquez avec le bouton droit pour afficher le menu contextuel.</p>
+      <p>3. Choisissez "Répondre" pour obtenir une réponse de l'assistant.</p>
+      <h3>Comment obtenir une clé API :</h3>
+      <p>1. Allez sur le site Web d'OpenAI et <a href="https://chat.openai.com/" target="_blank">créez un compte</a>.</p>
+      <p>2. Accédez à la <a href="https://platform.openai.com/account/api-keys" target="_blank">section API</a> pour générer une nouvelle clé.</p>
+      <p>3. Copiez cette clé et collez-la dans le champ API Key des <a href="https://help.openai.com/en/articles/4936850-where-do-i-find-my-secret-api-key" target="_blank">options de cette extension</a>.</p>
+      <p>⚠️ Attention : Si vous souhaitez utiliser votre propre clé API, vous devez au minimum avoir crédité votre compte de 5€. Sinon, la clé sera invalide car il ne pourra pas vous facturer pour les requêtes.</p>
+      <h3>Tarifs :</h3>
+      <p>- Gpt-3 : 0,002 $ / 1 000 jetons</p>
+      <p>- Gpt-4 : 0,03 $ / 1 000 jetons</p>
+      <p>- 1 000 jetons correspondent à environ 750 mots.</p>
+    </div>
+    
+  </div>
+  <script src="options.js"></script>
+</body>
+</div>
+</html>
