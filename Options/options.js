@@ -2,7 +2,7 @@
 function loadOptions() {
   chrome.storage.sync.get(['theme', 'model', 'prefix', 'apiKey'], function(items) {
     document.getElementById('theme').value = items.theme || 'light';
-    document.getElementById('model').value = items.model || 'gpt-3.5-turbo';
+    document.getElementById('model').value = items.model || 'gpt-3.5-turbo-16k';
     document.getElementById('prefix').value = items.prefix || 'Exemple : Vous êtes un expert en informatique, répondez-moi avec seulement la ou les réponses à la question : ';
     document.getElementById('apiKey').value = items.apiKey || '';
 

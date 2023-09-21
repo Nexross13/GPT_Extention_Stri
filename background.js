@@ -25,8 +25,8 @@ function copyTextToClipboard(text) {
   
   // Écouteur pour le menu contextuel
   chrome.contextMenus.onClicked.addListener(function (info, tab) {
-    chrome.storage.sync.get(['modelChoice', 'prefix', 'apiKey'], function (items) {
-      const model = items.modelChoice || 'gpt-4-0613';
+    chrome.storage.sync.get(['model', 'prefix', 'apiKey'], function (items) {
+      const model = items.model || '';
       const prefix = items.prefix || 'Votre préfixe par défaut';
       const apiKey = items.apiKey || 'Votre clé API par défaut';
   
