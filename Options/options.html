@@ -11,8 +11,6 @@
     <div class="option-section">
       <label for="model">Choisir un modèle :</label>
       <select id="model">
-        <option id="model" value="gpt-3.5-turbo-16k">GPT-3</option>
-        <option id="model" value="gpt-4-0613">GPT-4</option>
       </select>
     </div>
     <div class="option-section">
@@ -24,33 +22,52 @@
     </div>
     <div class="option-section">
       <label for="prefix">Préfixe de question :</label>
-      <textarea id="prefix" rows="4" placeholder="Votre préfixe (Exemple : Vous êtes un expert en informatique, répondez-moi avec seulement la ou les réponses à la question :)"></textarea>
+      <textarea id="prefix" rows="4" placeholder="Votre préfixe (Exemple : Vous êtes un expert en informatique, spécialisé dans les systèmes et réseaux, avec une expertise approfondie en ITIL et une solide maîtrise des environnements IT.  Répondez-moi avec seulement la ou les réponses à la question :)"></textarea>
     </div>
     <div class="option-section">
       <label for="apiKey">Clé API :</label>
-      <input type="text" id="apiKey" size="60" maxlength="100" placeholder="Votre clé API" />
-      
+      <input type="text" id="apiKey" size="60" maxlength="100" placeholder="Votre clé API (ex : sk-.......)" />
+    </div>
+    <div class="option-section">
+      <label for="notifications">Activer les notifications :</label>
+      <div class="toggle-switch">
+        <input type="checkbox" id="notifications" class="toggle-input">
+        <label for="notifications" class="toggle-label"></label>
+      </div>
+    </div>
+    <div class="option-section">
+      <label for="mode-stri">Activer le mode STRI :</label>
+      <div class="toggle-switch">
+        <input type="checkbox" id="mode-stri" class="toggle-input">
+        <label for="mode-stri" class="toggle-label"></label>
+      </div>
     </div>
     <button id="save">Sauvegarder</button>
     <p id="status"></p>
     <div class="how-to">
       <h2>Comment utiliser cette extension :</h2>
-      <p>1. Sélectionnez du texte sur n'importe quelle page Web.</p>
-      <p>2. Cliquez avec le bouton droit pour afficher le menu contextuel.</p>
-      <p>3. Choisissez "Répondre" pour obtenir une réponse de l'assistant.</p>
+      <ol>
+        <li>Sélectionnez du texte sur n'importe quelle page Web.</li>
+        <li>Cliquez avec le bouton droit pour afficher le menu contextuel et choisissez <strong>"Répondre"</strong>.</li>
+        <li>Ou utilisez le raccourci clavier <strong>⌘Cmd + ⇧Maj + &</strong> (macOS) ou <strong>Ctrl+I</strong> (Windows/Linux) pour envoyer la requête directement à l'assistant.</li>
+        <li>Si vous souhaitez modifier le raccourci pour déclencher l'envoi vers ChatGPT, vous pouvez aller dans <strong>chrome://extensions/shortcuts</strong> et cliquer sur <strong>l'icône de stylo</strong> pour modifier les raccourcis selon vos préférences.</li>
+      </ol>
       <h3>Comment obtenir une clé API :</h3>
-      <p>1. Allez sur le site Web d'OpenAI et <a href="https://chat.openai.com/" target="_blank">créez un compte</a>.</p>
-      <p>2. Accédez à la <a href="https://platform.openai.com/account/api-keys" target="_blank">section API</a> pour générer une nouvelle clé.</p>
-      <p>3. Copiez cette clé et collez-la dans le champ API Key des <a href="https://help.openai.com/en/articles/4936850-where-do-i-find-my-secret-api-key" target="_blank">options de cette extension</a>.</p>
-      <p>⚠️ Attention : Si vous souhaitez utiliser votre propre clé API, vous devez au minimum avoir crédité votre compte de 5€. Sinon, la clé sera invalide car il ne pourra pas vous facturer pour les requêtes.</p>
-      <h3>Tarifs :</h3>
-      <p>- Gpt-3 : 0,002 $ / 1 000 jetons</p>
-      <p>- Gpt-4 : 0,03 $ / 1 000 jetons</p>
-      <p>- 1 000 jetons correspondent à environ 750 mots.</p>
+      <ol>
+        <li>Allez sur le site Web d'OpenAI et <a href="https://chat.openai.com/" target="_blank">créez un compte</a>.</li>
+        <li>Accédez à la <a href="https://platform.openai.com/account/api-keys" target="_blank">section API</a> pour générer une nouvelle clé API.</li>
+        <li>Copiez cette clé et collez-la dans le champ <strong>API Key</strong> des options de l'extension.</li>
+      </ol>
+      <h3>Paramétrage de l'extension :</h3>
+      <ul>
+        <li><strong>Modèles d'IA</strong> : Choisissez parmi les modèles GPT-4, GPT-4 Turbo, et GPT-4o pour adapter la performance de l'extension à vos besoins.</li>
+        <li><strong>Mode STRI</strong> : Activez ou désactivez la fonctionnalité de sélection automatique des réponses pour les quiz sur stri.net .</li>
+        <li><strong>Notifications</strong> : Activez ou désactivez les notifications de l'extension pour chaque réponse de l'assistant.</li>
+      </ul>
+      <h3>Tarification :</h3>
+      <p>Consultez les informations de tarification directement sur le site d'OpenAI : <a href="https://openai.com/api/pricing" target="_blank">Tarifs OpenAI</a></p>
     </div>
-    
   </div>
   <script src="options.js"></script>
 </body>
-</div>
 </html>

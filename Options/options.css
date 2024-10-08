@@ -75,6 +75,7 @@ button:hover {
   box-shadow: 0 4px 8px rgba(200,200,200,0.2);
 }
 
+
 .dark-theme select, .dark-theme input, .dark-theme textarea {
   background: #333;
   color: #fff;
@@ -119,4 +120,52 @@ body {
 
 .footer a:hover {
   text-decoration: underline;
+}
+
+/* Reste du code inchangé */
+
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin-top: 10px;
+}
+
+.toggle-input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-label {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border-radius: 34px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.toggle-label:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.toggle-input:checked + .toggle-label {
+  background-color: #007bff;
+}
+
+.toggle-input:checked + .toggle-label:before {
+  transform: translateX(26px);
 }
